@@ -9,10 +9,13 @@ export default class NavigationMenu extends React.Component {
     
     state = {}
     scrollTarget(target){
+        console.log('item presionado');
         this.setState({ activeItem: target });
         if(target === 'home'){
+            console.log('voy por home');
             rsScroller.scrollToTop();
         }else{
+            console.log('voy por '+target);
             rsScroller.scrollToTarget(target);
         }
     }
@@ -20,7 +23,7 @@ export default class NavigationMenu extends React.Component {
         const { activeItem } = this.state
         return(
             <Menu color={'teal'} fixed={'top'} stackable>
-                <Menu.Item header>Víctor Valencia</Menu.Item>
+                <Menu.Item header onClick={() => this.scrollTarget('home')}>Víctor Valencia</Menu.Item>
                 <Menu.Menu position='right'>
                     <Menu.Item
                     name='about'

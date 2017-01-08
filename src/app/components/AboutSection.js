@@ -8,8 +8,8 @@ export default class AboutSection extends React.Component {
     render(){
         const id = 'about';
         return(
-            <div>
-                <Segment vertical className={id} textAlign='center' padded='very'>
+            <div className={id}>
+                <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
                         <Header.Content>
                             <h1>About Me</h1>
