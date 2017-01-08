@@ -2,18 +2,32 @@ const webpack = require('webpack');
 const path = require('path');
 const buildPath = path.resolve(__dirname, 'dist');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
-const TransferWebpackPlugin = require('transfer-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-//const ExtractTextPlugin2 = require("extract-text-webpack-plugin");
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-    entry: [path.join(__dirname, '/src/app/app.js')],
-    // Render source-map file for final build
-    devtool: 'source-map',
-    // output config
+    entry: {
+        main: path.join(__dirname, '/src/app/app.js')
+    },
     output: {
-        path: buildPath+'/js', // Path of output file
+        path: buildPath+'/scripts', // Path of output file
         filename: 'app.js', // Name of output file
+    },
+    module:{
+        loaders: [
+            {
+                test: /\.js$/, // All .js files
+                loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
+                exclude: [nodeModulesPath]
+            },    
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(
+                    "css","sass"),
+                query: {
+                    includePaths: [path.resolve(__dirname, "./src/styles")]
+                }        
+            }
+        ]
     },
     plugins: [
         // Define production build to allow React to strip out unnecessary checks
@@ -29,41 +43,10 @@ const config = {
                 warnings: false,
             },
         }),
-        new ExtractTextPlugin("styles.css"),
-        //new ExtractTextPlugin2("pppp.css"),
-        // Allows error warnings but does not stop compiling.
-        // new webpack.NoErrorsPlugin(),
-        // Transfer Files
-        /*new TransferWebpackPlugin(
-            [
-                {from: 'www'},
-            ],
-            path.resolve(__dirname, 'src')
-        ),*/
-    ],
-    module: {
-        loaders: [
-            {
-                test: /\.js$/, // All .js files
-                loaders: ['babel-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
-                exclude: [nodeModulesPath],
-            },
-            /*{
-                test: /\.css$/,
-                loader: ExtractTextPlugin2.extract("style-loader", "css-loader")
-            },*/
-            {
-                test: /\.scss$/,
-                loaders: ["style-loader", "css-loader", "sass-loader"],
-                loader: ExtractTextPlugin.extract(
-                    "style",
-                    "css!sass"),
-                query: {
-                    includePaths: [path.resolve(__dirname, "./src/styles")]
-                }
-            }
-        ],
-    }
+        new ExtractTextPlugin(path.resolve(__dirname,'dist/styles/main.css'), {
+            allChunks: true
+        })
+    ]
 };
 
 module.exports = config;

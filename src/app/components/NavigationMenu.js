@@ -1,39 +1,59 @@
 import React from 'react';
-import MenuItem from 'material-ui/MenuItem';
-import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 import rsScroller from 'react-smooth-scroller';
-import AppBar from 'material-ui/AppBar';
-import IconButton from 'material-ui/IconButton';
-import FlatButton from 'material-ui/FlatButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import { Menu } from 'semantic-ui-react';
 
 export default class NavigationMenu extends React.Component {
     constructor(props) {
         super(props);
     }
-    onScrollTop() {
-        rsScroller.scrollToTop();
-    }
-    onScrollTarget(target) {
-        rsScroller.scrollToTarget(target);
+    
+    state = {}
+    scrollTarget(target){
+        this.setState({ activeItem: target });
+        if(target === 'home'){
+            rsScroller.scrollToTop();
+        }else{
+            rsScroller.scrollToTarget(target);
+        }
     }
     render(){
+        const { activeItem } = this.state
         return(
-            <AppBar
-            title={<span>Víctor Valencia</span>}
-            style={{position: 'fixed'}}
-            iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-            iconElementRight={
-                <div>
-                <FlatButton label="Home" onClick={this.onScrollTop}/>
-                <FlatButton label="About" onClick={() => this.onScrollTarget('about')}/>
-                <FlatButton label="Knowledge" onClick={() => this.onScrollTarget('knowledge')}/>
-                <FlatButton label="Portafolio" onClick={() => this.onScrollTarget('portafolio')}/>
-                <FlatButton label="Experience" onClick={() => this.onScrollTarget('experience')}/>
-                <FlatButton label="Contact" onClick={() => this.onScrollTarget('contact')}/>
-                </div>
-            }
-            />
+            <Menu color={'teal'} fixed={'top'} stackable>
+                <Menu.Item header>Víctor Valencia</Menu.Item>
+                <Menu.Menu position='right'>
+                    <Menu.Item
+                    name='about'
+                    active={activeItem === 'about'}
+                    content='About'
+                    onClick={() => this.scrollTarget('about')}
+                    />
+                    <Menu.Item
+                    name='knowledge'
+                    active={activeItem === 'knowledge'}
+                    content='Knowledge'
+                    onClick={() => this.scrollTarget('knowledge')}
+                    />
+                    <Menu.Item
+                    name='portafolio'
+                    active={activeItem === 'portafolio'}
+                    content='Portafolio'
+                    onClick={() => this.scrollTarget('portafolio')}
+                    />
+                    <Menu.Item
+                    name='experience'
+                    active={activeItem === 'experience'}
+                    content='Experience'
+                    onClick={() => this.scrollTarget('experience')}
+                    />
+                    <Menu.Item
+                    name='contact'
+                    active={activeItem === 'contact'}
+                    content='Contact'
+                    onClick={() => this.scrollTarget('contact')}
+                    />                    
+                </Menu.Menu>
+            </Menu>
         );
     }
 }

@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
-const buildPath = path.resolve(__dirname, 'build');
+const buildPath = path.resolve(__dirname, 'dist');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 const TransferWebpackPlugin = require('transfer-webpack-plugin');
-
+console.log("salida "+buildPath+'/scripts/app.js');
 const config = {
   // Entry points to the project
   entry: [
@@ -13,7 +13,7 @@ const config = {
   ],
   // Server Configuration options
   devServer: {
-    contentBase: 'src/www', // Relative directory for base of server
+    contentBase: './', // Relative directory for base of server
     devtool: 'eval',
     hot: true, // Live-reload
     inline: true,
@@ -22,18 +22,18 @@ const config = {
   },
   devtool: 'eval',
   output: {
-    path: buildPath, // Path of output file
+    path: buildPath+'/scripts', // Path of output file
     filename: 'app.js',
   },
   plugins: [
     // Enables Hot Modules Replacement
     new webpack.HotModuleReplacementPlugin(),
     // Allows error warnings but does not stop compiling.
-    new webpack.NoErrorsPlugin(),
+    //new webpack.NoErrorsPlugin(),
     // Moves files
-    new TransferWebpackPlugin([
+    /*new TransferWebpackPlugin([
       {from: 'www'},
-    ], path.resolve(__dirname, 'src')),
+    ], path.resolve(__dirname, 'src')),*/
   ],
   module: {
     loaders: [
