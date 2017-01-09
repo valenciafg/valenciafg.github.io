@@ -1,3 +1,12 @@
+.content{
+    & > h1{
+        color: #FFF;
+    }
+}
+.segment-content{
+    color: #FFF;
+    font-size: 1.5em;
+}
 .main{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.png) no-repeat fixed;
     background-size: cover;
@@ -15,6 +24,14 @@
     //     left: 0;
     //     bottom: 0;
     // }
+    h1.header{
+        .content{
+            color: #FFF;
+            .sub.header{
+                    color: #FFF;
+            }
+        }
+    }
 }
 .about{
   padding-top: 15%;
@@ -37,26 +54,29 @@
 .contact{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/laptop.jpg) no-repeat fixed;
     background-size: cover;
-    .social_icons{
-        padding-top: 5% !important;
-        a{
-            .icon{
-                .github{
-                    color: #333;
-                }
-                .linkedin{
-                    color: #0077b5;
-                }
-                .twitter{
-                    color: #1da1f2;
-                }
-                .mail{
-                    color: #ffa930;;
-                }
-            }
-        }
-    }
     .ui.icon.header .icon.contact {
         display: inline !important;
+    }
+}
+
+.social_icons{
+    padding-top: 5% !important;
+    a{
+        margin-right: 5px;
+        .icon{
+            background: #FFF;
+            &.github{
+                color: #333;
+            }
+            &.linkedin{
+                color: #0077b5;
+            }
+            &.twitter{
+                color: #1da1f2;
+            }
+            &.mail{
+                color: #ffa930;;
+            }
+        }
     }
 }
