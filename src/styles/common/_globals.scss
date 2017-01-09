@@ -1,10 +1,10 @@
 .content{
     & > h1{
-        color: #FFF;
+        color: #E7B216;
     }
 }
 .segment-content{
-    color: #FFF;
+    color: #00BCD4;
     font-size: 1.5em;
 }
 .main{
@@ -26,9 +26,9 @@
     // }
     h1.header{
         .content{
-            color: #FFF;
+            color: #E7B216;
             .sub.header{
-                    color: #FFF;
+                    color: #00BCD4;
             }
         }
     }

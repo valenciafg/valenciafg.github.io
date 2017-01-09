@@ -18,14 +18,15 @@
                 padding: 5%;
                 line-height: 1.5em;
             }
-        }
-        .label.left{
-            background:#FFF !important;
-            border-color: #000 !important;
+            border-width: 3px;
         }
         .label.right{
-            background:#000 !important;
-            border-color: #FFF !important;
+            background:#00BCD4 !important;
+            border-color: #E7B216 !important;
+        }
+        .label.left{
+            background:#E7B216 !important;
+            border-color: #00BCD4 !important;
         }
     }
 }
