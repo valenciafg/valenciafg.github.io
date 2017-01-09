@@ -1,3 +1,13 @@
+.ui.top.fixed.stackable.menu{
+    background: #008395;
+    .header.item{
+        color: #E7B216;
+    }
+    .right.menu > .item{
+        color: #E7B216;
+    }
+}
+
 .content{
     & > h1{
         color: #E7B216;
