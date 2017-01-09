@@ -16,13 +16,24 @@
     //     bottom: 0;
     // }
 }
+.about{
+  padding-top: 15%;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/puente.jpg) no-repeat fixed;
+  background-size: cover;
+}
 .knowledge{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.jpg) no-repeat fixed;
     background-size: cover;
 }
-.about{
-  padding-top: 15%;
+.portafolio{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/website.jpg) no-repeat fixed;
+    background-size: cover;
 }
+.experience{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/workstation.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
 .contact{
     background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/laptop.jpg) no-repeat fixed;
     background-size: cover;

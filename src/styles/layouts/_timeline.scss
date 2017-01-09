@@ -1,4 +1,31 @@
-#timeline{
+.timeline{
     width: 100%;
     margin: 0 auto;
+    list-style: none;
+    &:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 4px;
+      background-color: #eeeeee;
+      left: 50%;
+      margin-left: -1.5px;
+    }
+    li{
+        .label{
+            .card{
+                padding: 5%;
+                line-height: 1.5em;
+            }
+        }
+        .label.left{
+            background:#FFF !important;
+            border-color: #000 !important;
+        }
+        .label.right{
+            background:#000 !important;
+            border-color: #FFF !important;
+        }
+    }
 }
