@@ -1,8 +1,51 @@
 .main{
-  background: url(../images/code.png) no-repeat center center fixed;
-  background-size: 100vh;
-  padding-top: 20%;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.png) no-repeat fixed;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 18%;
+    // &:after{
+    //     background: rgba(2,15,23,.55);
+    //     content: "";
+    //     width: 100%;
+    //     height: auto;
+    //     position: absolute;
+    //     z-index: -1;
+    //     top: 0;
+    //     right: 0;
+    //     left: 0;
+    //     bottom: 0;
+    // }
+}
+.knowledge{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.jpg) no-repeat fixed;
+    background-size: cover;
 }
 .about{
   padding-top: 15%;
+}
+.contact{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/laptop.jpg) no-repeat fixed;
+    background-size: cover;
+    .social_icons{
+        padding-top: 5% !important;
+        a{
+            .icon{
+                .github{
+                    color: #333;
+                }
+                .linkedin{
+                    color: #0077b5;
+                }
+                .twitter{
+                    color: #1da1f2;
+                }
+                .mail{
+                    color: #ffa930;;
+                }
+            }
+        }
+    }
+    .ui.icon.header .icon.contact {
+        display: inline !important;
+    }
 }

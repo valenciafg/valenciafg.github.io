@@ -8,8 +8,8 @@ export default class MainSection extends React.Component {
     render(){
         const id = 'main';
         return(
-            <div>
-                <Segment vertical className={id} textAlign='center' padded='very'>
+            <div className={id}>
+                <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
                         <Icon name='users' circular />
                         <Header.Content>

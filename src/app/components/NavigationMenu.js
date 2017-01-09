@@ -6,16 +6,16 @@ export default class NavigationMenu extends React.Component {
     constructor(props) {
         super(props);
     }
-    
+
     state = {}
     scrollTarget(target){
-        console.log('item presionado');
+        //console.log('item presionado');
         this.setState({ activeItem: target });
         if(target === 'home'){
-            console.log('voy por home');
+            //console.log('voy por home');
             rsScroller.scrollToTop();
         }else{
-            console.log('voy por '+target);
+            //console.log('voy por '+target);
             rsScroller.scrollToTarget(target);
         }
     }
@@ -54,7 +54,7 @@ export default class NavigationMenu extends React.Component {
                     active={activeItem === 'contact'}
                     content='Contact'
                     onClick={() => this.scrollTarget('contact')}
-                    />                    
+                    />
                 </Menu.Menu>
             </Menu>
         );

@@ -9,22 +9,25 @@ export default class ContactSection extends React.Component {
         const id = 'contact';
         return(
             <div className={id}>
-                <Segment vertical className={id} textAlign='center' padded='very'>
+                <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
                         <Header.Content>
                             <h1>Contact Me</h1>
-                            <Header.Subheader>
-                                <a href={"https://github.com/valenciafg"} target="{_blank}">
-                                    <Icon circular  name='github' size='huge'/>
+                            <Header.Subheader className="social_icons">
+                                <a href={"https://github.com/valenciafg"} target="_blank">
+                                    <Icon circular  name='github' className="contact" size='huge'/>
                                 </a>
-                                <a href={"https://github.com/valenciafg"} target="{_blank}">
-                                    <Icon circular name='linkedin' size='huge'/>
+                                <a href={"https://www.linkedin.com/in/valenciafg"} target="_blank">
+                                    <Icon circular name='linkedin' className="contact" size='huge'/>
                                 </a>
-                                <a href={"https://github.com/valenciafg"} target="{_blank}">
-                                    <Icon circular name='twitter' size='huge'/>
+                                <a href={"https://twitter.com/valenciafg"} target="_blank">
+                                    <Icon circular name='twitter' className="contact" size='huge'/>
                                 </a>
-                                <a href={"mailto:valencia6x@gmail.com?Subject=Hi%20Victor"} target="{_blank}">
-                                    <Icon circular name='mail' size='huge'/>
+                                <a href={"https://www.flickr.com/photos/valenciafg"} target="_blank">
+                                    <Icon circular name='flickr' className="contact" size='huge'/>
+                                </a>
+                                <a href={"mailto:valencia6x@gmail.com?Subject=Hi%20Victor"} target="_blank">
+                                    <Icon circular name='mail' className="contact" size='huge'/>
                                 </a>
                             </Header.Subheader>
                         </Header.Content>
