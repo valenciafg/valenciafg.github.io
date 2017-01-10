@@ -1,24 +1,24 @@
 .ui.top.fixed.stackable.menu{
-    background: #008395;
+    background: $hard_cyan;
     .header.item{
-        color: #E7B216;
+        color: $mustard;
     }
     .right.menu > .item{
-        color: #E7B216;
+        color: $mustard;
     }
 }
 
 .content{
     & > h1{
-        color: #E7B216;
+        color: $mustard;
     }
 }
 .segment-content{
-    color: #00BCD4;
+    color: $cyan;
     font-size: 1.5em;
 }
 .main{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.png) no-repeat fixed;
+    background: $gradient, url(../images/code.png) no-repeat fixed;
     background-size: cover;
     padding-top: 20%;
     padding-bottom: 18%;
@@ -36,37 +36,25 @@
     // }
     h1.header{
         .content{
-            color: #E7B216;
+            color: $mustard;
             .sub.header{
-                    color: #00BCD4;
+                    color: $cyan;
             }
         }
     }
 }
 .about{
   padding-top: 15%;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/puente.jpg) no-repeat fixed;
+  background: $gradient, url(../images/puente.jpg) no-repeat fixed;
   background-size: cover;
 }
 .knowledge{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/code.jpg) no-repeat fixed;
+    background: $gradient, url(../images/code.jpg) no-repeat fixed;
     background-size: cover;
 }
 .portafolio{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/website.jpg) no-repeat fixed;
+    background: $gradient, url(../images/website.jpg) no-repeat fixed;
     background-size: cover;
-}
-.experience{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/workstation.jpg) no-repeat fixed;
-    background-size: cover;
-}
-
-.contact{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/laptop.jpg) no-repeat fixed;
-    background-size: cover;
-    .ui.icon.header .icon.contact {
-        display: inline !important;
-    }
 }
 
 .social_icons{

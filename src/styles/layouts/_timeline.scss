@@ -1,6 +1,7 @@
 .timeline{
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
     list-style: none;
     &:before {
       top: 0;
@@ -21,12 +22,14 @@
             border-width: 3px;
         }
         .label.right{
-            background:#00BCD4 !important;
-            border-color: #E7B216 !important;
+            margin-left: -25% !important;
+            background:$cyan !important;
+            border-color: $mustard !important;
         }
         .label.left{
-            background:#E7B216 !important;
-            border-color: #00BCD4 !important;
+            margin-left: 20% !important;
+            background:$mustard !important;
+            border-color: $cyan !important;
         }
     }
 }
