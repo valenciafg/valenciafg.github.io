@@ -78,6 +78,18 @@
   color: #ffa930;
 }
 
+.portafolio-item {
+  background: transparent !important;
+}
+
+.portafolio-item .content {
+  background: #E7B216 !important;
+}
+
+.portafolio-item .extra.content {
+  background: #00BCD4 !important;
+}
+
 .experience {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/workstation.jpg) no-repeat fixed;
   background-size: cover;
