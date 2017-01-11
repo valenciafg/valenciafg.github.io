@@ -6,66 +6,67 @@ var portafolio = [
     {
         index: 0,
         title: "Villa Blanca",
-        description: lorem,
+        description: "",
         image: "dist/images/villablanca.png",
-        technologies: "",
+        technologies: [
+            {name:"Wordpress"},
+            {name:"PHP"},
+            {name:"Semantic-UI"},
+            {name:"jQuery"},
+            {name:"ReactJS"}
+        ],
         url: "http://villablancabarcelona.com/"
     },
     {
         index: 1,
-        title: "aasdsadas1",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
+        title: "Dokument v2.0",
+        image: "dist/images/dokument.png",
+        technologies: [
+            {name:"Codeigniter"},
+            {name:"PHP"},
+            {name:"MySQL"},
+            {name:"AdminLTE"},
+            {name:"Bootstrap"}
+        ],
+        description: "",
+        url: "http://www.linuxsolutions.com.ve/dokument-software-de-digitalizacion-y-gestion-de-documentos/"
     },
     {
         index: 2,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
+        title: "Hotel Plaza Merú Website Improvements",
+        image: "dist/images/meru.png",
+        technologies: [
+            {name:"PHP"},
+            {name:"Bootstrap"},
+            {name:"jQuery"}
+        ],
+        description: "lorem",
+        url: "https://www.hotelplazameru.com/"
     },
     {
         index: 3,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
+        title: "Rotary Guards Control System",
+        image: "dist/images/guardias.png",
+        technologies: [
+            {name:"Web2py"},
+            {name:"Python"},
+            {name:"Bootstrap"},
+            {name:"jQuery"}
+        ],
+        description: "",
         url: ""
     },
     {
         index: 4,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
-    },
-    {
-        index: 5,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
-    },
-    {
-        index: 6,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
-    },
-    {
-        index: 7,
-        title: "a112131",
-        image: "",
-        technologies: "",
-        description: lorem,
-        url: ""
+        title: "List of Car Workshops and Health Centers",
+        image: "dist/images/sc.png",
+        technologies: [
+            {name: "Codeigniter"},
+            {name: "Oracle"},
+            {name: "jQuery"}
+        ],
+        description: "lorem",
+        url: "http://www.seguroscaroni.com/"
     }
 ];
 export default class PortafolioLayout extends React.Component {

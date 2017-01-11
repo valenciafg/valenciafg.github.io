@@ -1,9 +1,16 @@
 import React, {Component} from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image, Label } from 'semantic-ui-react'
 
 export default class PortafolioItem extends React.Component {
     constructor(props) {
         super(props);
+    }
+    listTechnologies(technologies){
+        return technologies.map((info)=>{
+            return(
+                <Label tag color="black">{info.name}</Label>
+            );
+        });
     }
     render(){
         return(
@@ -21,7 +28,7 @@ export default class PortafolioItem extends React.Component {
                     </Card.Description>
                 </Card.Content>
                 <Card.Content extra>
-                    {this.props.info.technologies}
+                    {this.listTechnologies(this.props.info.technologies)}
                 </Card.Content>
             </Card>
         );

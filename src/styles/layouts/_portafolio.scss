@@ -5,5 +5,9 @@
     }
     .extra.content{
         background: $cyan !important;
+        .tag.label{
+            margin-left: 1.5em;
+            margin-top: .5em;
+        }
     }
 }

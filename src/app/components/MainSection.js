@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Header, Icon, Segment } from 'semantic-ui-react';
+import { Header, Image, Segment } from 'semantic-ui-react';
 
 export default class MainSection extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ export default class MainSection extends React.Component {
             <div className={id}>
                 <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
-                        <Icon name='users' circular />
+                        <Image src='dist/images/tati.png' size='small' shape='circular' />
                         <Header.Content>
                             Víctor Valencia
                             <Header.Subheader>
