@@ -11,7 +11,7 @@ export default class MainSection extends React.Component {
             <div className={id}>
                 <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
-                        <Image src='dist/images/tati.png' size='small' shape='circular' alt="profile picture" />
+                        <Image src='dist/images/tati.jpg' size='small' shape='circular' alt="profile picture" />
                         <Header.Content>
                             Víctor Valencia
                             <Header.Subheader>
