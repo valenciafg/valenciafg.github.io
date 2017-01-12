@@ -20,12 +20,15 @@ export default class PortafolioItem extends React.Component {
                     <Card.Header>
                         {this.props.info.title}
                     </Card.Header>
-                    <Card.Meta>
-                        {this.props.info.url}
-                    </Card.Meta>
                     <Card.Description>
                         {this.props.info.description}
                     </Card.Description>
+                    <Card.Meta>
+                        <br/>
+                        <Label color="black" as='a' href={this.props.info.url} target="_blank">
+                            <Icon name="code"/>
+                        </Label>
+                    </Card.Meta>
                 </Card.Content>
                 <Card.Content extra>
                     {this.listTechnologies(this.props.info.technologies)}

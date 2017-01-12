@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import { Card } from 'semantic-ui-react';
 import PortafolioItem from './PortafolioItem';
-var lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius auctor placerat. Aenean aliquam massa ac blandit porttitor. Vestibulum vel sapien pellentesque diam convallis viverra.";
+
 var portafolio = [
     {
         index: 0,
         title: "Villa Blanca",
-        description: "",
+        description: "Website to Villa Blanca mansion located in Barcelona, Spain",
         image: "dist/images/villablanca.png",
         technologies: [
             {name:"Wordpress"},
@@ -28,19 +28,19 @@ var portafolio = [
             {name:"AdminLTE"},
             {name:"Bootstrap"}
         ],
-        description: "",
+        description: "It's an application dedicated to the digitalization and massive management of documents, helps to lower the high number of consumables in the office",
         url: "http://www.linuxsolutions.com.ve/dokument-software-de-digitalizacion-y-gestion-de-documentos/"
     },
     {
         index: 2,
-        title: "Hotel Plaza Merú Website Improvements",
+        title: "Hotel Plaza Merú Website",
         image: "dist/images/meru.png",
         technologies: [
             {name:"PHP"},
             {name:"Bootstrap"},
             {name:"jQuery"}
         ],
-        description: "lorem",
+        description: "Improvements to the backend structure, integration of the language switch component, creation of the reservation component, as well as some changes to the user interface",
         url: "https://www.hotelplazameru.com/"
     },
     {
@@ -53,8 +53,8 @@ var portafolio = [
             {name:"Bootstrap"},
             {name:"jQuery"}
         ],
-        description: "",
-        url: ""
+        description: "Activities control system for IT staff ",
+        url: "https://github.com/valenciafg/rgcs"
     },
     {
         index: 4,
@@ -65,7 +65,7 @@ var portafolio = [
             {name: "Oracle"},
             {name: "jQuery"}
         ],
-        description: "lorem",
+        description: "Search and reporting of health care providers and auto shops",
         url: "http://www.seguroscaroni.com/"
     }
 ];

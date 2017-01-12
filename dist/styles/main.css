@@ -20,7 +20,7 @@
 }
 
 .main {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/code.png) no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/profile.jpg) no-repeat center;
   background-size: cover;
   padding-top: 20%;
   padding-bottom: 18%;
@@ -36,7 +36,7 @@
 
 .about {
   padding-top: 15%;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/puente.jpg) no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/orinoco.jpg) no-repeat center bottom fixed;
   background-size: cover;
 }
 
@@ -80,6 +80,7 @@
 
 .portafolio-item {
   background: transparent !important;
+  box-shadow: none !important;
 }
 
 .portafolio-item .content {

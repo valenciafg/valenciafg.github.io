@@ -20,12 +20,6 @@ export default class ContactSection extends React.Component {
                                 <a href={"https://www.linkedin.com/in/valenciafg"} target="_blank">
                                     <Icon circular name='linkedin' className="contact" size='huge'/>
                                 </a>
-                                <a href={"https://twitter.com/valenciafg"} target="_blank">
-                                    <Icon circular name='twitter' className="contact" size='huge'/>
-                                </a>
-                                <a href={"https://www.flickr.com/photos/valenciafg"} target="_blank">
-                                    <Icon circular name='flickr' className="contact" size='huge'/>
-                                </a>
                                 <a href={"mailto:valencia6x@gmail.com?Subject=Hi%20Victor"} target="_blank">
                                     <Icon circular name='mail' className="contact" size='huge'/>
                                 </a>

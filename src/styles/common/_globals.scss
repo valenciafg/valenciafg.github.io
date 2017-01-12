@@ -18,7 +18,7 @@
     font-size: 1.5em;
 }
 .main{
-    background: $gradient, url(../images/code.png) no-repeat fixed;
+    background: $gradient, url(../images/profile.jpg) no-repeat center;
     background-size: cover;
     padding-top: 20%;
     padding-bottom: 18%;
@@ -45,7 +45,7 @@
 }
 .about{
   padding-top: 15%;
-  background: $gradient, url(../images/puente.jpg) no-repeat fixed;
+  background: $gradient, url(../images/orinoco.jpg) no-repeat center bottom fixed;
   background-size: cover;
 }
 .knowledge{
