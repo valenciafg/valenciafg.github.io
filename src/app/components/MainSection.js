@@ -1,6 +1,37 @@
 import React, {Component} from 'react';
 import { Header, Image, Segment } from 'semantic-ui-react';
+import TypeWriter from 'react-typewriter';
 
+var loves = [
+  {
+    id: 1,
+    text: 'Full Stack Web Developer'
+  },
+  {
+    id: 2,
+    text: 'Linux User'
+  },
+  {
+    id: 3,
+    text: 'Python & ReactJS Lover'
+  },
+  {
+    id: 4,
+    text: 'Full Stack Web Developer'
+  },
+  {
+    id: 5,
+    text: 'Full Stack Web Developer'
+  },
+  {
+    id: 6,
+    text: 'Full Stack Web Developer'
+  },
+  {
+    id: 7,
+    text: 'Full Stack Web Developer'
+  }
+]
 export default class MainSection extends React.Component {
     constructor(props) {
         super(props);
@@ -13,9 +44,12 @@ export default class MainSection extends React.Component {
                     <Header as='h1' icon textAlign='center'>
                         <Image src='dist/images/tati.JPG' size='small' shape='circular' alt="profile picture" />
                         <Header.Content>
-                            Víctor Valencia
+                            <TypeWriter typing={1} fixed={true}>
+                              Víctor Valencia
+                            </TypeWriter>
                             <Header.Subheader>
-                                Manage your preferences
+                              description here
+
                             </Header.Subheader>
                         </Header.Content>
                     </Header>
