@@ -13,14 +13,14 @@ export default class ContactSection extends React.Component {
                     <Header as='h1' icon textAlign='center'>
                         <Header.Content>
                             <h1>Contact Me</h1>
-                            <Header.Subheader className="social_icons">
-                                <a href={"https://github.com/valenciafg"} target="_blank">
+                            <Header.Subheader className='social_icons'>
+                                <a href={'https://github.com/valenciafg'} target="_blank">
                                     <Icon circular  name='github' className="contact" size='huge'/>
                                 </a>
-                                <a href={"https://www.linkedin.com/in/valenciafg"} target="_blank">
-                                    <Icon circular name='linkedin' className="contact" size='huge'/>
+                                <a href={'https://www.linkedin.com/in/valenciafg'} target="_blank">
+                                    <Icon circular name='linkedin' className='contact' size='huge'/>
                                 </a>
-                                <a href={"mailto:valencia6x@gmail.com?Subject=Hi%20Victor"} target="_blank">
+                                <a href={'mailto:valencia6x@gmail.com?Subject=Hi%20Victor'} target="_blank">
                                     <Icon circular name='mail' className="contact" size='huge'/>
                                 </a>
                             </Header.Subheader>

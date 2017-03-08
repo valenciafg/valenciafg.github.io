@@ -14,10 +14,10 @@ export default function() {
         }
     });
     //Fix Jump background on IE11
-    console.log("el navegador es "+navigator.userAgent);
+    console.log('el navegador es '+navigator.userAgent);
     if(navigator.userAgent.match(/Trident\/7\./)) {
-        console.log("entro aqui");
-        $('body').on("mousewheel", function () {
+        console.log('entro aqui');
+        $('body').on('mousewheel', function () {
             // remove default behavior
             event.preventDefault();
             //scroll without smoothing
