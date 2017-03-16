@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
 import { Card } from 'semantic-ui-react';
 import PortafolioItem from './PortafolioItem';
+//Images
+import villablanca from '../../images/villablanca.png';
+import dokument from '../../images/dokument.png';
+import meru from '../../images/meru.png';
+import guardias from '../../images/guardias.png';
+import caroni from '../../images/sc.png';
 
 var portafolio = [
     {
         index: 0,
         title: 'Villa Blanca',
         description: 'Website to Villa Blanca mansion located in Barcelona, Spain',
-        image: 'dist/images/villablanca.png',
+        image: villablanca,
         technologies: [
             {name:'Wordpress'},
             {name:'PHP'},
@@ -20,7 +26,7 @@ var portafolio = [
     {
         index: 1,
         title: 'Dokument v2.0',
-        image: 'dist/images/dokument.png',
+        image: dokument,
         technologies: [
             {name:'Codeigniter'},
             {name:'PHP'},
@@ -34,7 +40,7 @@ var portafolio = [
     {
         index: 2,
         title: 'Hotel Plaza Merú Website',
-        image: 'dist/images/meru.png',
+        image: meru,
         technologies: [
             {name:'PHP'},
             {name:'Bootstrap'},
@@ -46,7 +52,7 @@ var portafolio = [
     {
         index: 3,
         title: 'Rotary Guards Control System',
-        image: 'dist/images/guardias.png',
+        image: guardias,
         technologies: [
             {name:'Web2py'},
             {name:'Python'},
@@ -59,7 +65,7 @@ var portafolio = [
     {
         index: 4,
         title: 'List of Car Workshops and Health Centers',
-        image: 'dist/images/sc.png',
+        image: caroni,
         technologies: [
             {name: 'Codeigniter'},
             {name: 'Oracle'},

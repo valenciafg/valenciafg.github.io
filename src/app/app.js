@@ -6,7 +6,7 @@ import smoothPageScroll from './modules/menu';
 
 import 'animate.css'
 import 'semantic-ui-css/semantic.css';
-import '../styles/main.css'
+import '../styles/main.scss'
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();

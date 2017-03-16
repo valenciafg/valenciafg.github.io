@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
-import { Header, Segment } from 'semantic-ui-react';
-
+import { Header, Segment, Container } from 'semantic-ui-react';
+import {Radar, RadarChart, PolarGrid, Legend,
+    PolarAngleAxis, PolarRadiusAxis} from 'recharts';
+const data = [
+    { subject: 'Math', A: 120, B: 110, fullMark: 150 },
+    { subject: 'Chinese', A: 98, B: 130, fullMark: 150 },
+    { subject: 'English', A: 86, B: 130, fullMark: 150 },
+    { subject: 'Geography', A: 99, B: 100, fullMark: 150 },
+    { subject: 'Physics', A: 85, B: 90, fullMark: 150 },
+    { subject: 'History', A: 65, B: 85, fullMark: 150 },
+];
 export default class KnowledgeSection extends React.Component {
     constructor(props) {
         super(props);
@@ -15,9 +24,14 @@ export default class KnowledgeSection extends React.Component {
                             <h1>Knowledge</h1>
                         </Header.Content>
                     </Header>
-                    <p className="segment-content">
-                        Lorem ipsum dolor sit amet, justo orci imperdiet, fringilla congue, fames duis blandit. Ac hac adipiscing nullam justo vestibulum vestibulum. Tortor ultrices pede. Pellentesque tincidunt hac gravida, eros mauris vivamus dolor diam pede. Vivamus neque, nam nec sem, blandit ligula et wisi, a volutpat pharetra rhoncus et tortor. Non quam justo, purus tortor elit est ullamcorper velit dui, at magna iaculis nullam pharetra vestibulum, massa cum cursus, vivamus sapien purus felis. Eget dui, sed quis odio consectetuer tellus platea a, imperdiet amet in nullam aliquam. In eros lobortis praesent placerat, hymenaeos ornare proin magna suscipit. Lacus tellus turpis, expedita vel id, congue sit ullamco neque. Rhoncus praesent at, integer commodo nulla nullam pede massa elit, tempus facilisi ut vel litora. Dui aptent vel semper, nec leo gravida posuere turpis, ipsum nulla sed vestibulum fringilla.
-                    </p>
+                    <Container>
+                        <RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={data} margin={{ top: 5, right: 20, left: 10, bottom: 5 }}>
+                            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
+                            <PolarGrid />
+                            <PolarAngleAxis dataKey="subject" />
+                            <PolarRadiusAxis/>
+                        </RadarChart>
+                    </Container>
                 </Segment>
             </div>
         );

@@ -2,7 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 const buildPath = path.resolve(__dirname, 'dist');
 const nodeModulesPath = path.resolve(__dirname, 'node_modules');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const postcssCssnext = require('postcss-cssnext')
+// multiple extract instances
+let extractCSS = new ExtractTextPlugin('styles/vendor.css', {allChunks: true});
+let extractSASS = new ExtractTextPlugin('styles/main.css', {allChunks: true});
+
+
 
 const config = {
     entry: {
@@ -17,7 +23,7 @@ const config = {
     },
     output: {
         path: buildPath, // Path of output file
-        filename: 'bundle.js', // Name of output file
+        filename: 'js/bundle.js', // Name of output file
     },
     module:{
         loaders: [
@@ -26,49 +32,53 @@ const config = {
                 loaders: ['babel-loader', 'eslint-loader'], // react-hot is like browser sync and babel loads jsx and es6-7
                 exclude: [nodeModulesPath]
             },
-            /*{
+            {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract(
-                    "css","sass"),
-                query: {
-                    includePaths: [path.resolve(__dirname, "./src/styles")]
-                }
-            },*/
+                loader: extractSASS.extract(
+                        'style-loader',
+                        'css-loader?sourceMap!postcss-loader!resolve-url-loader!sass-loader?sourceMap',
+                        {
+                            publicPath: '../../src/'
+                        }
+                    )
+            },
             {
                 test: /\.css$/i,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                loader: extractCSS.extract('style-loader', 'css-loader')
             },
             {
-                test: /\.png$/,
-                loader: 'url-loader',
-                options: { limit: 100000 } ,
-            },
-            {
-                test: /\.jpg$/,
-                loader: 'file-loader'
+                test: /\.(png|jpe?g|gif|svg|ico)$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'images/[name].[ext]'
+                }
             },
             {
                 test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url?limit=10000&mimetype=application/font-woff'
+                loader: 'file?name=[name].[ext]&limit=10000&mimetype=application/font-woff'
             },
             {
                 test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url?limit=10000&mimetype=application/font-woff'
+                loader: 'file?name=[name].[ext]&limit=10000&mimetype=application/font-woff'
             },
             {
                 test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url?limit=10000&mimetype=application/octet-stream'
+                loader: 'file?name=[name].[ext]&limit=10000&mimetype=application/octet-stream'
             },
             {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'file'
+                loader: 'file?name=[name].[ext]'
             },
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url?limit=10000&mimetype=image/svg+xml'
+                loader: 'file?name=[name].[ext]&limit=10000&mimetype=image/svg+xml'
             }
         ]
     },
+    postcss: [ postcssCssnext({ browsers: ['last 2 versions'] }) ],
+    // sassLoader: {
+    //     includePaths: [ 'src/images' ]
+    // },
     plugins: [
         // Define production build to allow React to strip out unnecessary checks
         new webpack.DefinePlugin({
@@ -84,8 +94,9 @@ const config = {
                 warnings: false,
             },
         }),
-        new ExtractTextPlugin('main.css', {allChunks: true}),
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+        extractCSS,
+        extractSASS,
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js'),
     ]
 };
 

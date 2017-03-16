@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Header, Image, Segment } from 'semantic-ui-react';
 import TypeWriter from 'react-typewriter';
+import tati from '../../images/tati.jpeg';
 import WOW from 'wowjs/dist/wow.js';
 
 var loves = [
@@ -47,7 +48,7 @@ export default class MainSection extends React.Component {
             <div className={id}>
                 <Segment vertical textAlign='center' padded='very'>
                     <Header as='h1' icon textAlign='center'>
-                        <Image src='dist/images/tati.JPG' size='large' shape='circular' alt="profile picture" />
+                        <Image src={tati} size='large' shape='circular' alt="profile picture" />
                         <Header.Content>
                             <TypeWriter typing={1} fixed={true}>
                               Víctor Valencia

@@ -18,22 +18,10 @@
     font-size: 1.5em;
 }
 .main{
-    background: $gradient, url(../images/profile.jpg) no-repeat center;
+    background: $gradient, url("../../images/profile.jpg") no-repeat center;
     background-size: cover;
     padding-top: 20%;
     padding-bottom: 18%;
-    // &:after{
-    //     background: rgba(2,15,23,.55);
-    //     content: "";
-    //     width: 100%;
-    //     height: auto;
-    //     position: absolute;
-    //     z-index: -1;
-    //     top: 0;
-    //     right: 0;
-    //     left: 0;
-    //     bottom: 0;
-    // }
     h1.header{
         .content{
             color: $mustard;
@@ -42,19 +30,6 @@
             }
         }
     }
-}
-.about{
-  padding-top: 15%;
-  background: $gradient, url(../images/orinoco.jpg) no-repeat center bottom fixed;
-  background-size: cover;
-}
-.knowledge{
-    background: $gradient, url(../images/code.jpg) no-repeat fixed;
-    background-size: cover;
-}
-.portafolio{
-    background: $gradient, url(../images/website.jpg) no-repeat fixed;
-    background-size: cover;
 }
 
 .social_icons{
