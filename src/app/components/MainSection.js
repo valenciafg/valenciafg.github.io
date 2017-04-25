@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Header, Image, Segment } from 'semantic-ui-react';
 import TypeWriter from 'react-typewriter';
 import tati from '../../images/tati.jpeg';
-import WOW from 'wowjs/dist/wow.js';
-
-var loves = [
+console.log('la url de tati es', tati);
+const loves = [
   {
     id: 1,
     text: 'Full Stack Developer'
@@ -33,33 +32,34 @@ var loves = [
     id: 7,
     text: 'Full Stack Web Developer'
   }
-]
-export default class MainSection extends React.Component {
-    constructor(props) {
-        super(props);
-        // this.wow = new WOW().init();
-    }
+];
+
+export default class MainSection extends Component {
+  constructor (props) {
+    super(props);
+      // this.wow = new WOW().init();
+  }
     // componentDidMount(){
     //   this.wow.sync();
     // }
-    render(){
-        const id = 'main';
-        return(
-            <div className={id}>
-                <Segment vertical textAlign='center' padded='very'>
-                    <Header as='h1' icon textAlign='center'>
-                        <Image src={tati} size='large' shape='circular' alt="profile picture" />
-                        <Header.Content>
-                            <TypeWriter typing={1} fixed={true}>
-                              Víctor Valencia
-                            </TypeWriter>
-                            <Header.Subheader className="wow fadeInUp">
-                              description here
-                            </Header.Subheader>
-                        </Header.Content>
-                    </Header>
-                </Segment>
-            </div>
-        );
-    }
+  render () {
+    const id = 'main';
+    return (
+        <div className={id}>
+            <Segment vertical textAlign="center" padded="very">
+                <Header as="h1" icon textAlign="center">
+                    <Image src={tati} size="large" shape="circular" alt="profile picture" />
+                    <Header.Content>
+                        <TypeWriter typing={1} fixed={true}>
+                          Víctor Valencia
+                        </TypeWriter>
+                        <Header.Subheader className="wow fadeInUp">
+                          description here
+                        </Header.Subheader>
+                    </Header.Content>
+                </Header>
+            </Segment>
+        </div>
+    );
+  }
 }

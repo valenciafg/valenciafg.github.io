@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import WOW from 'wowjs';
 import NavigationMenu from './components/NavigationMenu';
 import MainSection from './components/MainSection';
@@ -9,13 +9,13 @@ import ExperienceSection from './components/ExperienceSection';
 import ContactSection from './components/ContactSection';
 
 class Main extends Component {
-  constructor(props, context) {
+  constructor (props, context) {
     super(props, context);
   }
-  componentDidMount() {
+  componentDidMount () {
     new WOW.WOW().init();
   }
-  render() {
+  render () {
     return (
       <div>
         <NavigationMenu/>
