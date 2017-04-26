@@ -42580,37 +42580,37 @@ module.exports = keyOf;
 /* 777 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/dokument.png";
+module.exports = __webpack_require__.p + "images/dokument.png";
 
 /***/ }),
 /* 778 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/guardias.png";
+module.exports = __webpack_require__.p + "images/guardias.png";
 
 /***/ }),
 /* 779 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/meru.png";
+module.exports = __webpack_require__.p + "images/meru.png";
 
 /***/ }),
 /* 780 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/sc.png";
+module.exports = __webpack_require__.p + "images/sc.png";
 
 /***/ }),
 /* 781 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/tati.jpeg";
+module.exports = __webpack_require__.p + "images/tati.jpeg";
 
 /***/ }),
 /* 782 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "src/images/villablanca.png";
+module.exports = __webpack_require__.p + "images/villablanca.png";
 
 /***/ }),
 /* 783 */
