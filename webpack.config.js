@@ -1,11 +1,12 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-let extractCSS = new ExtractTextPlugin({ filename: 'styles/vendor.css', allChunks: true });
-let extractSASS = new ExtractTextPlugin({ filename: 'styles/style.css', allChunks: true });
+const extractCSS = new ExtractTextPlugin({ filename: 'styles/vendor.css', allChunks: true, disable: false });
+const extractSASS = new ExtractTextPlugin({ filename: 'styles/custom.css', allChunks: true, disable: false });
 const env = process.env.NODE_ENV;
 const ROOT_PATH = __dirname;
 const SRC_PATH = path.join(ROOT_PATH, 'src');
@@ -58,28 +59,28 @@ const RULES = [
     }]
   },
   {
-    test: /.css$/,
-    use: extractCSS.extract({
-      fallback: 'style-loader',
-      publicPath: './',
-      use: [
-        'css-loader',
-        'postcss-loader'
-      ]
-    })
+    test: /\.css$/,
+    use: [
+      'style-loader',
+      'css-loader'
+    ]
   },
   {
     test: /\.scss$/,
-    use: extractSASS.extract({
-      fallback: "style-loader",
-      publicPath: './',
-      use: [
-        'css-loader',
-        'postcss-loader',
-        'resolve-url',
-        'sass-loader'
-      ]
-    })
+    use: [
+      {
+        loader: 'style-loader',
+      },
+      {
+        loader: 'css-loader'
+      },
+      {
+        loader: 'resolve-url-loader'
+      },
+      {
+        loader: 'sass-loader'
+      }
+    ]
   },
   {
     test: /\.(ttf|eot|png|jpe?g|gif|svg|ico)$/,
@@ -120,25 +121,20 @@ const PLUGINS = [
     names: ['common', 'react'],
     minChunks: Infinity
   }),
-  extractCSS,
-  extractSASS,
+  new HtmlWebpackPlugin({
+    title: 'Víctor Valencia | Full Stack Web Developer',
+    filename: '../index.html',
+    template: './index.html'
+  }),
+  /*new ExtractTextPlugin({
+    filename: 'styles/[name].css',
+    allChunks: true,
+  }),*/
+  // extractCSS,
+  // extractSASS,
   new webpack.ProvidePlugin({
     $: "jquery"
   }),
-  new webpack.LoaderOptionsPlugin({
-    test: /\.s?css$/,
-    options: {
-      output: { path: DIST_PATH },
-      context: SRC_PATH,
-      postcss: [
-        autoprefixer({ browsers: [
-          "last 2 versions",
-          "android 4",
-          "opera 12"
-        ] })
-      ]
-    }
-  })
 ];
 
 const webpackConfig = {
