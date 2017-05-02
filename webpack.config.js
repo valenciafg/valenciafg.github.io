@@ -78,7 +78,7 @@ const RULES = [
         loader: 'resolve-url-loader'
       },
       {
-        loader: 'sass-loader'
+        loader: 'sass-loader?sourceMap'
       }
     ]
   },
@@ -97,7 +97,7 @@ const RULES = [
     options: {
       limit: 10000,
       mimetype: 'application/font-woff',
-      publicPath: '../',
+      publicPath: 'dist/',
       name: '[path][name].[ext]'
     }
   },
@@ -106,7 +106,7 @@ const RULES = [
     include: /node_modules|bower_components/,
     loader: 'file-loader',
     options: {
-      publicPath: '../',
+      publicPath: 'dist/',
       name: 'vendor/[name].[ext]'
     }
   }
