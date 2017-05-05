@@ -21,7 +21,9 @@ const sourceMapQueryStr = isProduction ? '+sourceMap' : '-sourceMap';
 const ENTRY = {
   main: 'app/app.js',
   common: [
-    'jquery'
+    'jquery',
+    'vegas',
+    'wow.js'
   ],
   react: [
     'lodash',
@@ -57,6 +59,10 @@ const RULES = [
         plugins: ['transform-decorators-legacy']
       }
     }]
+  },
+  {
+    test: require.resolve('wow.js/dist/wow.js'),
+    use: 'exports-loader?this.WOW'
   },
   {
     test: /\.css$/,

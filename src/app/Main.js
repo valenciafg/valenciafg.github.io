@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WOW from 'wowjs';
+import { WOW } from 'wowjs';
 import NavigationMenu from './components/NavigationMenu';
 import MainSection from './components/MainSection';
 import AboutSection from './components/AboutSection';
@@ -13,7 +13,8 @@ class Main extends Component {
     super(props, context);
   }
   componentDidMount () {
-    new WOW.WOW().init();
+    const wow = new WOW();
+    wow.init();
   }
   render () {
     return (

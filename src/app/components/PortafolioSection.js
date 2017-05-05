@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Segment } from 'semantic-ui-react';
+import { Header, Container, Segment } from 'semantic-ui-react';
 import PortafolioLayout from './PortafolioLayout';
 
 export default class PortafolioSection extends Component {
@@ -16,7 +16,9 @@ export default class PortafolioSection extends Component {
                         <h1>Portafolio</h1>
                     </Header.Content>
                 </Header>
-                <PortafolioLayout/>
+                <Container>
+                    <PortafolioLayout/>
+                </Container>
             </Segment>
         </div>
     );

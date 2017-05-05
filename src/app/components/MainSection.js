@@ -47,14 +47,14 @@ export default class MainSection extends Component {
     return (
         <div className={id}>
             <Segment vertical textAlign="center" padded="very">
+                <Image src={tati} size="small" shape="circular" alt="profile picture" centered/>
                 <Header as="h1" icon textAlign="center">
-                    <Image src={tati} size="large" shape="circular" alt="profile picture" />
                     <Header.Content>
-                        <TypeWriter typing={1} fixed={true}>
+                        <div>
                           Víctor Valencia
-                        </TypeWriter>
+                        </div>
                         <Header.Subheader className="wow fadeInUp">
-                          description here
+                          Full Stack Developer
                         </Header.Subheader>
                     </Header.Content>
                 </Header>
