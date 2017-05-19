@@ -129,6 +129,12 @@ const PLUGINS = [
   }),
   new HtmlWebpackPlugin({
     title: 'Víctor Valencia | Full Stack Web Developer',
+    /*
+    minify: {
+      colapseWhitespace: true
+    },
+    hash: true,
+    */
     filename: '../index.html',
     template: './index.html'
   }),
