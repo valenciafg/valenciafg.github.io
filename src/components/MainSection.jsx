@@ -6,6 +6,7 @@ import { Header, Segment } from 'semantic-ui-react';
 
 import amores from '../images/amores.jpg';
 import orinoco from '../images/orinoco.jpg';
+import nosotros from '../images/nosotros1.jpeg';
 
 class MainSection extends Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class MainSection extends Component {
       animation: 'random',
       animationDuration: 20000,
       slides: [
+        { src: nosotros },
         { src: amores },
         { src: orinoco },
       ],

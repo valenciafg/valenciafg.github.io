@@ -3,7 +3,15 @@
   background-size: cover;
   .recharts-legend-wrapper{
     top: 100px;
-    @media only screen and (min-width: 475px){
+    @media only screen and (max-width: 475px){
+      right: -18px !important;
+      top: 60px !important;
+    }
+    @media only screen and (max-width: 768px){
+      right: -18px !important;
+      top: 60px !important;
+    }
+    @media only screen and (max-width: 1024px){
       right: -18px !important;
       top: 60px !important;
     }
