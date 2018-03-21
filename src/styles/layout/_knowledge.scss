@@ -1,0 +1,14 @@
+.knowledge{
+  background: $gradient, url("../../images/code.jpg") no-repeat fixed;
+  background-size: cover;
+  .recharts-legend-wrapper{
+    top: 100px;
+    @media only screen and (min-width: 475px){
+      right: -18px !important;
+      top: 60px !important;
+    }
+    .recharts-legend-item-text{
+      color: $mustard;
+    }
+  }
+}

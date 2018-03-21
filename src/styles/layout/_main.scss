@@ -1,0 +1,14 @@
+.main{
+  .ui.vertical{
+    padding-top: 20%;
+    padding-bottom: 18%;
+  }
+  h1.header{
+    .content{
+      color: $mustard;
+      .sub.header{
+        color: $cyan;
+      }
+    }
+  }
+}

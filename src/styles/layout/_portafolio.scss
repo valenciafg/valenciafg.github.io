@@ -1,0 +1,19 @@
+.portafolio{
+  background: $gradient, url("../../images/website.jpg") no-repeat fixed;
+  background-size: cover;
+}
+
+.portafolio-item{
+  background: transparent !important;
+  box-shadow: none !important;
+  .content{
+      background: $mustard !important;
+  }
+  .extra.content{
+      background: $cyan !important;
+      .tag.label{
+          margin-left: 1.5em;
+          margin-top: .5em;
+      }
+  }
+}

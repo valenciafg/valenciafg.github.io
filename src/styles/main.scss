@@ -1,8 +1,7 @@
 @import "common/_variables";
 @import "common/_globals";
-@import "layouts/_about";
-@import "layouts/_knowledge";
-@import "layouts/_portafolio";
-@import "layouts/_experience";
-@import "layouts/_timeline";
-@import "layouts/_contact";
+@import "layout/_main.scss";
+@import "layout/_knowledge.scss";
+@import "layout/_portafolio.scss";
+@import "layout/_experience.scss";
+@import "layout/_contact.scss";

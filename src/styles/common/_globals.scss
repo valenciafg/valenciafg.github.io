@@ -1,11 +1,11 @@
 .ui.top.fixed.stackable.menu{
-    background: $hard_cyan;
-    .header.item{
-        color: $mustard;
-    }
-    .right.menu > .item{
-        color: $mustard;
-    }
+  background: $hard_cyan;
+  .header.item{
+      color: $mustard;
+  }
+  .right.menu > .item{
+      color: $mustard;
+  }
 }
 
 .content{
@@ -16,20 +16,6 @@
 .segment-content{
     color: $cyan;
     font-size: 1.5em;
-}
-.main{
-    background: $gradient, url("../src/images/profile.jpg") no-repeat center;
-    background-size: cover;
-    padding-top: 20%;
-    padding-bottom: 18%;
-    h1.header{
-        .content{
-            color: $mustard;
-            .sub.header{
-                    color: $cyan;
-            }
-        }
-    }
 }
 
 .social_icons{

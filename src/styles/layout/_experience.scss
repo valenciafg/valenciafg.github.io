@@ -1,0 +1,13 @@
+.experience{
+  background: $gradient, url("../../images/workstation.jpg") no-repeat fixed;
+  background-size: cover;
+  .vertical-timeline-element-date{
+    color: $mustard;
+    font-weight: bold;
+  }
+  .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
+    @media only screen and (min-width: 1170px){
+      right: 140%;
+    }
+  }
+}
