@@ -2,17 +2,22 @@
   background: $gradient, url("../../images/code.jpg") no-repeat fixed;
   background-size: cover;
   .recharts-legend-wrapper{
-    top: 100px;
+    top: 58px !important;
+    right: 390px !important;
+    @media only screen and (max-width: 360px){
+      right: -30px !important;
+      top: 60px !important;
+    }
     @media only screen and (max-width: 475px){
-      right: -18px !important;
+      right: -20px !important;
       top: 60px !important;
     }
     @media only screen and (max-width: 768px){
-      right: -18px !important;
+      right: -20px !important;
       top: 60px !important;
     }
     @media only screen and (max-width: 1024px){
-      right: -18px !important;
+      right: -20px !important;
       top: 60px !important;
     }
     .recharts-legend-item-text{

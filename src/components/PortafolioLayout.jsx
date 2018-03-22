@@ -9,7 +9,7 @@ function portafolioItems() {
   ));
 }
 const PortafolioLayout = () => (
-  <Card.Group>
+  <Card.Group centered>
     {portafolioItems()}
   </Card.Group>
 );
