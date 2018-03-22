@@ -1,6 +1,8 @@
 import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { Menu, Sidebar, Icon } from 'semantic-ui-react';
+import { Link } from 'react-scroll';
 import menuItems from '../data/menuItems';
 
 const NavBarMobile = ({
@@ -15,10 +17,23 @@ const NavBarMobile = ({
       animation="overlay"
       icon="labeled"
       inverted
-      items={menuItems}
       vertical
       visible={visible}
-    />
+    >
+      {_.map(menuItems, item => (
+        <Link
+          {...item}
+          className="item"
+          to={item.key}
+          spy
+          smooth
+          duration={250}
+        >
+          {item.content}
+        </Link>
+      ))
+      }
+    </Sidebar>
     <Sidebar.Pusher
       dimmed={visible}
       onClick={onPusherClick}

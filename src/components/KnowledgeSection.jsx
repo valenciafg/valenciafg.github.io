@@ -10,7 +10,7 @@ const divStyle = {
 };
 
 const KnowledgeSection = () => (
-  <div className="knowledge">
+  <div name="knowledge" className="knowledge">
     <Segment
       vertical
       textAlign="center"

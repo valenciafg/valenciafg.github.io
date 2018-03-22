@@ -3,7 +3,7 @@ import { Header, Segment } from 'semantic-ui-react';
 import Timeline from './Timeline';
 
 const ExperienceSection = () => (
-  <div className="experience">
+  <div name="experience" className="experience">
     <Segment vertical textAlign="center" padded="very">
       <Header as="h1" icon textAlign="center">
         <Header.Content>

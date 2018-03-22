@@ -3,7 +3,7 @@ import { Header, Container, Segment } from 'semantic-ui-react';
 import PortafolioLayout from './PortafolioLayout';
 
 const PortafolioSection = () => (
-  <div className="portafolio">
+  <div name="portafolio" className="portafolio">
     <Segment vertical textAlign="center" padded="very">
       <Header as="h1" icon textAlign="center">
         <Header.Content>

@@ -31,7 +31,7 @@ class MainSection extends Component {
   }
   render() {
     return (
-      <div className="main">
+      <div name="main" className="main">
         <Segment vertical textAlign="center" padded="very">
           <Header as="h1" icon textAlign="center">
             <Header.Content>

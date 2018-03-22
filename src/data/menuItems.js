@@ -1,5 +1,5 @@
 const menuItems = [
-  { key: 'about', content: 'About Me' },
+  { key: 'main', content: 'About Me' },
   { key: 'knowledge', content: 'Knowledge' },
   { key: 'portafolio', content: 'Portafolio' },
   { key: 'experience', content: 'Experience' },

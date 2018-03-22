@@ -2,7 +2,7 @@ import React from 'react';
 import { Header, Segment, Icon } from 'semantic-ui-react';
 
 const ContactSection = () => (
-  <div className="contact">
+  <div name="contact" className="contact">
     <Segment vertical textAlign="center" padded="very">
       <Header as="h1" icon textAlign="center">
         <Header.Content>
